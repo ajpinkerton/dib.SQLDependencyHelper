@@ -58,8 +58,20 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\StoredProcedures" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\PreDeployment" />
+    <Folder Include="Scripts\PostDeployment" />
+    <Folder Include="PublishProfiles" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\DependentObject.sql" />
+    <Build Include="dbo\StoredProcedures\usp_Seed_DependentObject_SQL13.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeployment\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishProfiles\MDF0000_Scratch.publish.xml" />
   </ItemGroup>
 </Project>
