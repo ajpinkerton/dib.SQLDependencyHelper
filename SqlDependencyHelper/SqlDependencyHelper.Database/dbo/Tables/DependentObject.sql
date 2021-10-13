@@ -5,5 +5,6 @@
 	[SchemaName] VARCHAR(255),
 	[ObjectName] VARCHAR(255),
 	[ObjectType] VARCHAR(255),
+	[ObjectDefinition] VARCHAR(MAX),
 	CONSTRAINT PK_DependentObject PRIMARY KEY (DependentObjectID)
 )

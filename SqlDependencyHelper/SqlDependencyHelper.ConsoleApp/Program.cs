@@ -12,8 +12,9 @@ namespace SqlDependencyHelper.ConsoleApp
                 .Build();
 
             string connectionString = config["connectionString"];
-
-            Console.WriteLine("Hello World!");
+            SqlDependencyService service = new SqlDependencyService(connectionString);
+            service.CreateObjects();
+            Console.WriteLine("Finished");
         }
     }
 }
