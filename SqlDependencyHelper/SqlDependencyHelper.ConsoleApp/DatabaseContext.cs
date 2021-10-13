@@ -10,7 +10,7 @@ namespace SqlDependencyHelper.ConsoleApp
     public class DatabaseContext : DbContext
     {
         private readonly string _connectionString;
-        public DbSet<DependentObject> DependentObjects { get; set; }
+        public DbSet<DependentObject> DependentObject { get; set; }
 
         public DatabaseContext(string connectionString)
         {
@@ -30,7 +30,6 @@ namespace SqlDependencyHelper.ConsoleApp
         public string ObjectName { get; set; }
         public string ObjectType { get; set; }
         public string ObjectDefinition { get; set; }
-
     }
 
 }

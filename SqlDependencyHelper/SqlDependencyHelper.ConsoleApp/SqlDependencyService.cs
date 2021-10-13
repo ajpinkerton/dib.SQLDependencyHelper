@@ -16,16 +16,17 @@ namespace SqlDependencyHelper.ConsoleApp
             _connectionString = connectionString;
         }
 
-        public void CreateObjects()
+        public async void CreateObjects()
         {
             List<DependentObject> objects;
             using (var context = new DatabaseContext(_connectionString))
             {
-                objects = context.DependentObjects.ToList();
+                objects = context.DependentObject.ToList();
 
                 foreach (DependentObject sqlObject in objects)
                 {
-                    var result = context.Database.ExecuteSqlRawAsync(sqlObject.ObjectDefinition);
+                    var result = await context.Database.ExecuteSqlRawAsync(sqlObject.ObjectDefinition);
+                    context.SaveChanges();
                 }
             }
 

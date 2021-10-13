@@ -3,7 +3,7 @@ AS
 BEGIN	
 	TRUNCATE TABLE [dbo].[DependentObject];
 
-	INSERT INTO [dbo].[DependentObject]([DatabaseName],[SchemaName],[ObjectName],[ObjectType],[ObjectDefinition])
-	VALUES ('MDF0880_Member','','MDF0880_Member','Database','CREATE DATABASE MDF0880_Member')
-	, ('MDF0880_Member','dbo','MemberUnit','Table','CREATE TABLE dbo.MemberUnit (ID INT)');
+	INSERT INTO [dbo].[DependentObject]([DependentObjectID],[DatabaseName],[SchemaName],[ObjectName],[ObjectType],[ObjectDefinition])
+	VALUES (1,'MDF0880_Member','','MDF0880_Member','Database','CREATE DATABASE MDF0880_Member')
+	, (2,'MDF0880_Member','dbo','MemberUnit','Table','CREATE TABLE dbo.MemberUnit (ID INT)');
 END
